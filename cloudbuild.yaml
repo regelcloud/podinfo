@@ -1,5 +1,5 @@
 ## Build docker images and push to gcr
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-f' , 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA-${date +%s}', '.']
-images: ['gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA-${date +%s}']
+  args: ['build','-f' , 'Dockerfile', '-t', 'gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA', '.']
+images: ['gcr.io/$PROJECT_ID/podinfo:$BRANCH_NAME-$SHORT_SHA']
